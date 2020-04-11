@@ -20,6 +20,22 @@ namespace WindowsFormsApp2
             TipoMedido.Text = "uF";
             tolerancia.Text = "20";
             }
+        private void valormedido_TextChanged(object sender, EventArgs e)
+            {
+            if (System.Text.RegularExpressions.Regex.IsMatch(valormedido.Text, "[^0-9]"))
+                {
+                MessageBox.Show("Digite Apenas Números");
+                valormedido.Text = 0.ToString();
+                }
+            }
+        private void valorbom_TextChanged(object sender, EventArgs e)
+            {
+            if (System.Text.RegularExpressions.Regex.IsMatch(valorbom.Text, "[^0-9]"))
+                {
+                MessageBox.Show("Digite Apenas Números");
+                valorbom.Text = 0.ToString();
+                }
+            }
 
         private void button1_Click(object sender, EventArgs e)
             {
@@ -54,7 +70,6 @@ namespace WindowsFormsApp2
             Minimo.Text = Novo.Min.ToString() + " " + TipoMedido.Text;
             Maximo.Text = Novo.Max.ToString() + " " + TipoMedido.Text;
             }
-
         }
 
     }

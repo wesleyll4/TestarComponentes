@@ -24,7 +24,7 @@ namespace WindowsFormsApp2
             {
             if (System.Text.RegularExpressions.Regex.IsMatch(valormedido.Text, "[^0-9-.]"))
                 {
-                MessageBox.Show("Digite Apenas Números");
+              //  MessageBox.Show("Digite Apenas Números");
                 valormedido.Text = 0.ToString();
                 }
             }
@@ -32,7 +32,7 @@ namespace WindowsFormsApp2
             {
             if (System.Text.RegularExpressions.Regex.IsMatch(valorbom.Text, "[^0-9-.]"))
                 {
-                MessageBox.Show("Digite Apenas Números");
+               // MessageBox.Show("Digite Apenas Números");
                 valorbom.Text = 0.ToString();
                 }
             }

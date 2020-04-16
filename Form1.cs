@@ -24,7 +24,6 @@ namespace WindowsFormsApp2
             {
             if (System.Text.RegularExpressions.Regex.IsMatch(valormedido.Text, "[^0-9-.]"))
                 {
-              //  MessageBox.Show("Digite Apenas Números");
                 valormedido.Text = 0.ToString();
                 }
             }
@@ -32,10 +31,17 @@ namespace WindowsFormsApp2
             {
             if (System.Text.RegularExpressions.Regex.IsMatch(valorbom.Text, "[^0-9-.]"))
                 {
-               // MessageBox.Show("Digite Apenas Números");
                 valorbom.Text = 0.ToString();
                 }
             }
+        private void tolerancia_TextChanged(object sender, EventArgs e)
+            {
+            if (System.Text.RegularExpressions.Regex.IsMatch(tolerancia.Text, "[^0-9-.]"))
+                {
+                tolerancia.Text = 0.ToString();
+                }
+            }
+
 
         private void button1_Click(object sender, EventArgs e)
             {
@@ -45,7 +51,7 @@ namespace WindowsFormsApp2
             Novo.ValorBom = double.Parse(valorbom.Text, CultureInfo.InvariantCulture);
             Novo.Tipo = TipoMedido.Text;
             Novo.Vbtipo = TipoBom.Text;
-            Novo.Porcentagem = int.Parse(tolerancia.Text);
+            Novo.Porcentagem = double.Parse(tolerancia.Text);
 
             Novo.Transformar();
 

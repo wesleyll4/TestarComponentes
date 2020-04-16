@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp2
+﻿using System;
+
+namespace WindowsFormsApp2
     {
     partial class Form1
         {
@@ -36,7 +38,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.TipoMedido = new System.Windows.Forms.ComboBox();
             this.TipoBom = new System.Windows.Forms.ComboBox();
-            this.tolerancia = new System.Windows.Forms.ComboBox();
             this.Status = new System.Windows.Forms.Label();
             this.Testar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tolerancia = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label3
@@ -127,21 +129,6 @@
             this.TipoBom.Name = "TipoBom";
             this.TipoBom.Size = new System.Drawing.Size(61, 21);
             this.TipoBom.TabIndex = 6;
-            // 
-            // tolerancia
-            // 
-            this.tolerancia.DisplayMember = "20";
-            this.tolerancia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tolerancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tolerancia.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tolerancia.Items.AddRange(new object[] {
-            "5",
-            "10",
-            "20"});
-            this.tolerancia.Location = new System.Drawing.Point(196, 57);
-            this.tolerancia.Name = "tolerancia";
-            this.tolerancia.Size = new System.Drawing.Size(76, 21);
-            this.tolerancia.TabIndex = 7;
             // 
             // Status
             // 
@@ -232,9 +219,19 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Tolerancia";
             // 
+            // tolerancia
+            // 
+            this.tolerancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tolerancia.Location = new System.Drawing.Point(196, 54);
+            this.tolerancia.Name = "tolerancia";
+            this.tolerancia.Size = new System.Drawing.Size(76, 20);
+            this.tolerancia.TabIndex = 17;
+            this.tolerancia.TextChanged += new System.EventHandler(this.tolerancia_TextChanged);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.tolerancia);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -244,7 +241,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Testar);
             this.Controls.Add(this.Status);
-            this.Controls.Add(this.tolerancia);
             this.Controls.Add(this.TipoBom);
             this.Controls.Add(this.TipoMedido);
             this.Controls.Add(this.valorbom);
@@ -281,8 +277,8 @@
         private System.Windows.Forms.Label Maximo;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox tolerancia;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tolerancia;
         }
     }
 

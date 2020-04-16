@@ -9,7 +9,7 @@ namespace WindowsFormsApp2
     class Componente
         {
         public string Tipo { get; set; }
-        public int Porcentagem { get; set; }
+        public double Porcentagem { get; set; }
         public double ValorMedido { get; set; }
         public double ValorBom { get; set; }
         public string Vbtipo { get; set; }

@@ -77,7 +77,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Componente.cs" />
+    <Compile Include="Entities\Componente.cs" />
+    <Compile Include="Entities\Exceptions\DomainExceptions.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

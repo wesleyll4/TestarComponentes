@@ -77,7 +77,6 @@ namespace WindowsFormsApp2
             this.valormedido.Name = "valormedido";
             this.valormedido.Size = new System.Drawing.Size(79, 20);
             this.valormedido.TabIndex = 2;
-            this.valormedido.Text = "0";
             this.valormedido.TextChanged += new System.EventHandler(this.valormedido_TextChanged);
             // 
             // valorbom
@@ -87,7 +86,6 @@ namespace WindowsFormsApp2
             this.valorbom.Name = "valorbom";
             this.valorbom.Size = new System.Drawing.Size(79, 20);
             this.valorbom.TabIndex = 4;
-            this.valorbom.Text = "0";
             this.valorbom.TextChanged += new System.EventHandler(this.valorbom_TextChanged);
             // 
             // label5
